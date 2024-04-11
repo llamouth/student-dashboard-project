@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+#root {
+    margin: 0;
+    padding: 0;
+    /* border: 2px solid; */
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: 
+    "NavBar NavBar"
+    "Section Main";
+}
