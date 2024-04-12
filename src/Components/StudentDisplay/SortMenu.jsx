@@ -14,12 +14,10 @@ function SortMenu ({sortDropDown, setSortDropDown, students, setStudents}) {
     return (
         <>
             {sortDropDown && 
-                <>
-                    <div className="sort">
-                        <p id="On-Track" onClick={handleClick} className="sort__options">On Track</p>
-                        <p id="Off-Track" onClick={handleClick} className="sort__options">Off Track</p>
-                    </div>
-                </>
+                <div className="sort">
+                    <p id="On-Track" onClick={handleClick} className="sort__options">On Track</p>
+                    <p id="Off-Track" onClick={handleClick} className="sort__options">Off Track</p>
+                </div>
             } 
         </>   
     )

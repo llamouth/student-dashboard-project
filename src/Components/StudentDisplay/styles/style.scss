@@ -132,9 +132,10 @@ span {
             color: #D62E2E;
             margin-left: 10px;
             font-weight: 900;
+            font-size: 10px;
 
             &:hover {
-                font-size: 20px;
+                font-size: 13px;
                 cursor: pointer;
             }
         }
@@ -147,12 +148,12 @@ span {
     }
 
     &__on {
-        color: lime;
+        color: #84AC90;
         font-weight: 700;
     }
 
     &__off{
-        color: #fd0000;
+        color: #ff3737;
         font-weight: 700;
     }
 }
