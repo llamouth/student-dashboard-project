@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-.classList {
+.studentList {
   grid-area: Main;
   display: grid;
   height: 100vh;
@@ -8,15 +8,15 @@
   padding-left: 40px;
   font-family: "Nunito Sans";
 }
-.classList__header {
+.studentList__header {
   grid-area: head;
   margin-top: 20px;
 }
-.classList__header h2 {
+.studentList__header h2 {
   margin-bottom: 5px;
   font-size: 25px;
 }
-.classList__list {
+.studentList__list {
   grid-area: list;
   max-height: 100%;
   overflow-y: auto;

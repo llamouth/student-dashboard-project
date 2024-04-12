@@ -1,5 +1,3 @@
-
-
 function DeleteButton ({notes, index, setNote}) {
 
     function handleDelete () {
