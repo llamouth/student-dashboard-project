@@ -18,10 +18,10 @@ function StudentNotes ({notes, setNote}) {
         <div className="student__notes">
             <h5>1-on-1 Notes</h5>
             <form className="student__comments" name="comments">
-                <label htmlFor="name">Commenter Name</label>
+                <label >Commenter Name</label>
                 <input type="text" htmlFor="comments"/>
                 <br />
-                <label htmlFor="name">Comment</label>
+                <label >Comment</label>
                 <input type="text" htmlFor="comments"/>
                 <br />
                 <button type="submit" onClick={handleInputSubmit} htmlFor="comments">Add Note</button>

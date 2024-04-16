@@ -8,7 +8,7 @@ function StudentMenu ({visible, student, notes, setNote}) {
     }
 
     function isCertified (bool) {
-       return !bool ? "❌" : "✅"
+       return !bool ? "❌" : "✅";
     }
 
     return (
@@ -42,7 +42,7 @@ function StudentMenu ({visible, student, notes, setNote}) {
             </>
         }
         </>
-    )
+    );
 }
 
 export default StudentMenu;
