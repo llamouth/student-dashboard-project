@@ -13,10 +13,12 @@ const FilterUsers = ({setStudents, Data, cohort}) => {
                 }else if(student.track === value) {
                     currentCohort.push(student)
                 }
-            }else if(student.cohort.cohortCode === cohort.split(" ").join("") && value === "All") {
-                currentCohort.push(student)
-            }else if (student.cohort.cohortCode === cohort.split(" ").join("") && student.track === value){
-                currentCohort.push(student)
+            }else if(student.cohort.cohortCode === cohort.split(" ").join("")) {
+                if(value === "All"){
+                    currentCohort.push(student)
+                }else if(student.track === value) {
+                    currentCohort.push(student)
+                }
             }
         })
         setStudents(currentCohort);
