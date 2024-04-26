@@ -1,14 +1,92 @@
-header {
+$border-color: #DCDCDC;
+
+.navbar {
     grid-area: NavBar;
     border: 2px solid;
-    background: #5D936E;
-    display: flex;
-    justify-content: center;
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    gap: 250px;
+    grid-auto-flow: column;
+    justify-content: space-around;
     align-items: center;
     color: #fff;
-    font-size: 25px;
 
     h2 {
         margin-bottom: 20px;
     }
+
+    &__profile {
+        width: 60px;
+        height: 60px; 
+        border-radius: 50%;
+        background: #ccc;
+        margin-left: 20px;
+    }
+
+    &__left {
+        display: flex;
+        // margin-left: 40px;
+        width: 100%;
+        justify-content: start;
+    }
+
+    &__right {
+        display: flex;
+        width: 100%;
+    }
+
+    &__text {
+        align-self: center;
+        font-size: 18px;
+        color: #000;
+        font-family: sans-serif
+    }
+}
+
+.searchbar{
+    
+    &__input {
+        border-radius: 20px;
+        padding: 10px 15px;
+        width: 330px;
+        border: 1px solid $border-color;
+
+        &::placeholder {
+            font-size: 17px;
+        }
+    }
+
+    &__image {
+        color: #767676;
+        position: relative;
+        right: 35px;
+        top: 2px;
+        width: 20px;
+
+    }
+}
+
+.filterUsers {
+    border-radius: 20px;
+    border-color: $border-color;
+    margin-right: 20px;
+    width: 150px;
+    padding: 10px 5px;
+}
+
+.searchUsers {
+    width: 400px;
+    color: #000;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.search {
+    color: #A8A8A8;
+    position: relative;
+    right: 30px;
+    top: 11px;
+    cursor: pointer;
 }

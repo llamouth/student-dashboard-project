@@ -1,38 +1,39 @@
-import React, { useEffect, useState } from 'react';
-import Data from "../../data/data.json"
-import "./styles/style.css"
+import React, { createContext, useEffect, useState } from 'react';
+import SortMenu from "./SortMenu"
+import "./styles/style.scss"
 import Student from './Student/Student';
-import SortMenu from './SortMenu';
 
-function StudentDisplay ({cohort}) {
-    
+
+function StudentDisplay ({cohort, students, setStudents, Data, currentStudent}) {  
+
     useEffect(() => {
         let filteredStudents = Data.sort((studentA, studentB) => {return studentA.names.surname.localeCompare(studentB.names.surname)})
         filteredStudents = Data.filter(student => {
             if( cohort === "All Students" ){return true}
             return student.cohort.cohortCode === cohort.split(" ").join("") 
         })
-        setStudents(filteredStudents)
+        setStudents(filteredStudents);
     }, [cohort])
 
-
-    const [sortDropDown, setSortDropDown] = useState(false)
-    const [students, setStudents] = useState(Data);
-
-    
+    const [sortDropDown, setSortDropDown] = useState(false);
 
     return (
         <main className='studentList'>
             <div className='studentList__header'>
-                <h2>{cohort}</h2>
-                <p>Total Students: <span>{students.length}</span></p>
-                <p onClick={() => setSortDropDown(!sortDropDown)} className='sort__text'>Sort By <span className='sort__arrow'>⌄</span></p>
-                <SortMenu sortDropDown={sortDropDown} setSortDropDown={setSortDropDown} students={students} setStudents={setStudents}/>
+                <div className="studentList__info">
+                    <p className='studentList__cohort'>{cohort}</p>
+                    <p className='studentList__amount'><span> ({students.length})</span></p>
+                </div>
+                <div className="studentList__sort">
+                    <p onClick={() => setSortDropDown(!sortDropDown)} className='sort__text'>Sort By</p>
+                    <p className='sort__arrow'>⌄</p>
+                    <SortMenu sortDropDown={sortDropDown} setSortDropDown={setSortDropDown} students={students} setStudents={setStudents}/> 
+                </div>
             </div>
             <div className="studentList__list">
                 {students.map(student => {  
                     return (
-                    <Student student={student} key={student.id}/>
+                    <Student student={student} key={student.id} currentStudent={currentStudent}/>
                     )
                 })}
             </div>

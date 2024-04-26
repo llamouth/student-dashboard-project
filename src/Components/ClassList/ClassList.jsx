@@ -1,11 +1,14 @@
 import React from 'react';
-import "./styles/style.css"
+import "./styles/style.scss"
+import Pursuit from "/Users/larrylamouth/Pursuit/M2/Projects/student-dashboard-project/src/Images/pursuit.png"
 
 function ClassList({setCohort}) {
 
     return (
         <section className='ClassList'>
-            <h4>Choose a Class by Start Date</h4>
+            <div className='ClassList__header'>
+                <img src={Pursuit} alt="" />
+            </div>
             <ul className='ClassList__classes'>
                 <li onClick={() => setCohort("All Students")}>All Students</li>
                 <li onClick={() => setCohort("Winter 2026")}>Winter 2026</li>

@@ -1,9 +1,7 @@
 import React from "react";
 
-function StudentTrackStatus({ student}) {
-    function updateStudentTrack (onTrack) {
-        onTrack ? student["track"] = "On Track" : student["track"] = "Off Track"
-    }
+function StudentTrackStatus({student}) {
+
 
     function checkIfOnTrack() {
         const { resume, linkedin, github, mockInterview } = student.certifications;
@@ -11,19 +9,17 @@ function StudentTrackStatus({ student}) {
 
         const isOnTrack = resume && linkedin && github && mockInterview && codeWarsScore > 600;
 
-        updateStudentTrack(isOnTrack)
-
         return (
             <>
                 {isOnTrack ? (
-                    <p className="student__on">On Track to graduate</p>
+                    <h5 className="student__on">On Track to graduate</h5>
                 ) : (
-                    <p className="student__off">Off Track to graduate</p>
+                    <h5 className="student__off">Off Track to graduate</h5>
                 )}
             </>
         );
     }
-
+    
     return <div>{checkIfOnTrack()}</div>;
 }
 
