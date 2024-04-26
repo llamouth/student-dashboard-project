@@ -24,9 +24,9 @@ function StudentDisplay ({cohort, students, setStudents, Data, currentStudent}) 
                     <p className='studentList__cohort'>{cohort}</p>
                     <p className='studentList__amount'><span> ({students.length})</span></p>
                 </div>
-                <div className="studentList__sort">
-                    <p onClick={() => setSortDropDown(!sortDropDown)} className='sort__text'>Sort By</p>
-                    <p className='sort__arrow'>⌄</p>
+                <div className="studentList__sort" onClick={() => setSortDropDown(!sortDropDown)}>
+                    <p  className='studentList__sort-text'>Sort By</p>
+                    <p className='studentList__sort-arrow'>⌄</p>
                     <SortMenu sortDropDown={sortDropDown} setSortDropDown={setSortDropDown} students={students} setStudents={setStudents}/> 
                 </div>
             </div>

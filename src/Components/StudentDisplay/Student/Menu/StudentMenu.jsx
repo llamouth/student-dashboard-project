@@ -1,4 +1,3 @@
-import StudentNotes from "./StudentNotes"
 import StudentTrackStatus from "../StudentTrackStatus"
 
 function StudentMenu ({visible, student, studentInfo, setVisibility}) {

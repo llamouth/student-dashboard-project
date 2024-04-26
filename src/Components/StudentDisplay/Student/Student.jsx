@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import StudentMenu from "./StudentMenu/StudentMenu"
+import StudentMenu from "./Menu/StudentMenu"
 import { CgNotes } from "react-icons/cg";
-import StudentNotes from "./StudentMenu/StudentNotes";
+import StudentNotes from "./Notes/StudentNotes";
 
 const months= ["_","January","February","March","April","May","June","July","August","September","October","November","December"];
 
