@@ -1,6 +1,6 @@
 import React from 'react';
 import "./styles/style.scss"
-import Pursuit from "/Users/larrylamouth/Pursuit/M2/Projects/student-dashboard-project/src/Images/pursuit.png"
+import Pursuit from "./pursuit.png"
 
 function ClassList({setCohort}) {
 
