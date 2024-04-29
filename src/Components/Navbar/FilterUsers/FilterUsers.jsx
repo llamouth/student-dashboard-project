@@ -1,23 +1,22 @@
 import React from "react";
 
 const FilterUsers = ({setStudents, Data, cohort}) => {
-    const currentCohort = []
 
     const handleClick = (e) => {
         const value = e.target.value;
 
-        Data.forEach(student => {
+        const currentCohort = Data.filter(student => {
             if(cohort === "All Students") {
                 if(value === "All"){
-                    currentCohort.push(student)
+                    return (student)
                 }else if(student.track === value) {
-                    currentCohort.push(student)
+                    return (student)
                 }
             }else if(student.cohort.cohortCode === cohort.split(" ").join("")) {
                 if(value === "All"){
-                    currentCohort.push(student)
+                    return (student)
                 }else if(student.track === value) {
-                    currentCohort.push(student)
+                    return (student)
                 }
             }
         })

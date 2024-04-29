@@ -4,8 +4,6 @@ function StudentTrackStatus({student}) {
 
 
     function checkIfOnTrack() {
-        const { resume, linkedin, github, mockInterview } = student.certifications;
-        const codeWarsScore = student.codewars.current.total;
 
         const isOnTrack = student.track === "On Track" 
 

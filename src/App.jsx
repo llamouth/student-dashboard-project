@@ -19,7 +19,6 @@ function App() {
       <StudentDisplay cohort={cohort} students={students} setStudents={setStudents} Data={Data} currentStudent={currentStudent}/>
     </>
   );
-
 }
 
 export default App;

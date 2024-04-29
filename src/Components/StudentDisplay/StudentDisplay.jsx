@@ -7,8 +7,7 @@ import Student from './Student/Student';
 function StudentDisplay ({cohort, students, setStudents, Data, currentStudent}) {  
 
     useEffect(() => {
-        let filteredStudents = Data.sort((studentA, studentB) => {return studentA.names.surname.localeCompare(studentB.names.surname)})
-        filteredStudents = Data.filter(student => {
+        let filteredStudents = Data.sort((studentA, studentB) => {return studentA.names.surname.localeCompare(studentB.names.surname)}).filter(student => {
             if( cohort === "All Students" ){return true}
             return student.cohort.cohortCode === cohort.split(" ").join("") 
         })
