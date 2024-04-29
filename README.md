@@ -30,4 +30,5 @@ Feel free to contribute to this project by submitting pull requests or reporting
 
 ## Link 
 
-- [CLICK HERE TO VIEW WEBSITE](https://student-dashboard-industry.netlify.app/)
+- [CLICK HERE TO VIEW WEBSITE(Industry Level)](https://student-dashboard-industry.netlify.app/)
+- [CLICK HERE TO VIEW WEBSITE (Standard Level)](https://llamouth-student-dashboard-project.netlify.app/)
